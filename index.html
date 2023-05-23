@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notNotion - Easiest Way To Track Your Transactions</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./style.css"
+  </head>
+  <body>
+    <main>
+      <div class="outer_section">
+        <div class="inner_section">
+          <div class="heading">
+            <p class="title">notNotion</p>
+            <p class="sub-title">Easiest Way To Track Your Transactions!</p>
+          </div>
+
+          <section class="middle">
+            <div class="overview">
+              <h3>Add Transaction</h3>
+              <form class="add">
+                <input
+                  type="text"
+                  name="source"
+                  placeholder="Source"
+                  autocomplete="off"
+                />
+                <input
+                  type="text"
+                  name="amount"
+                  placeholder="Amount"
+                  autocomplete="off"
+                />
+                <input type="submit" value="Add Transaction" />
+              </form>
+            </div>
+            <div class="statistics-section">
+              <h3>Statistics</h3>
+              <div class="stats-item">
+                <ul class="item">
+                  <li>
+                    <span id="balance">Balance: $</span>
+                  </li>
+                  <li>
+                    <span id="income">Income: $</span>
+                  </li>
+                  <li>
+                    <span id="expense">Expense: $</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <div class="transactions__history">
+            <h3>Transaction History</h3>
+            <div class="records">
+              <div class="incomes">
+                <h3>Income</h3>
+                <ul class="income__item"></ul>
+              </div>
+              <div class="expenses">
+                <h3>Expense</h3>
+                <ul class="expense-item"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
