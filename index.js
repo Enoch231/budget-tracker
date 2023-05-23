@@ -4,6 +4,9 @@ let expenseItem = document.querySelector("ul.expense-item");
 let balance = document.getElementById("balance");
 let income = document.getElementById("income");
 let expense = document.getElementById("expense");
+// console.log(balance);
+// console.log(income);
+// console.log(expense);
 
 let transactions =
   localStorage.getItem("transactions") !== null
@@ -12,25 +15,19 @@ let transactions =
 
 const updateStatistics = () => {
   const updatedIncome = transactions
-    .filter((transaction) => {
-      return transaction.amount > 0;
-    })
-    .reduce((total, transaction) => {
-      return (total += transaction.amount);
-    }, 0);
+    .filter((transaction) => transaction.amount > 0)
+    .reduce((total, transaction) => (total += transaction.amount), 0);
+  console.log(updatedIncome);
 
   const updatedExpense = transactions
-    .filter((transaction) => {
-      return transaction.amount < 0;
-    })
-    .reduce((total, transaction) => {
-      return (total += Math.abs(transaction.amount));
-    }, 0);
+    .filter((transaction) => transaction.amount < 0)
+    .reduce((total, transaction) => (total += Math.abs(transaction.amount)), 0);
+  console.log(updatedExpense);
 
   updatedBalance = updatedIncome - updatedExpense;
-  balance.textContent += updatedBalance;
-  income.textContent += updatedIncome;
-  expense.textContent += updatedExpense;
+  balance.textContent = updatedBalance;
+  income.textContent = updatedIncome;
+  expense.textContent = updatedExpense;
 };
 updateStatistics();
 

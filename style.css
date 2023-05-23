@@ -88,7 +88,7 @@ h3 {
   margin: 30px 0 0 0;
 }
 
-.item span {
+.item p {
   display: flex;
   justify-content: center;
   padding: 5px;
@@ -99,17 +99,17 @@ h3 {
   box-shadow: var(--box-shadow);
 }
 
-.item #balance {
+.item .balance {
   background-color: #fff2dd92;
   border-right: 10px solid #f6c065;
 }
 
-.item #income {
+.item .income {
   background-color: #e7fff1ad;
   border-right: 10px solid #16c77a;
 }
 
-.item #expense {
+.item .expense {
   background-color: #ffeef0bb;
   border-right: 10px solid #eb596e;
 }
