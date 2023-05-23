@@ -4,9 +4,6 @@ let expenseItem = document.querySelector("ul.expense-item");
 let balance = document.getElementById("balance");
 let income = document.getElementById("income");
 let expense = document.getElementById("expense");
-// console.log(balance);
-// console.log(income);
-// console.log(expense);
 
 let transactions =
   localStorage.getItem("transactions") !== null
